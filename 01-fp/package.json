@@ -4,7 +4,7 @@
   "description": "Assignment",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register"
+    "test": "mocha"
   },
   "author": "Hannes Moser <hannes@impossiblearts.com>",
   "license": "MIT",
