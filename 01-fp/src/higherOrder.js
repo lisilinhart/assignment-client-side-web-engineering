@@ -22,7 +22,7 @@ export function reduce(data, fn) {
   let reducedData = 0;
 
   data.forEach((el) => {
-    reducedData = fn(reducedData, fn(el));
+    reducedData = fn(reducedData, el);
   });
 
   return reducedData;
