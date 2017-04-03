@@ -1,4 +1,4 @@
-export function map(data, fn) {
+function map(data, fn) {
   const mappedData = [];
 
   data.forEach((el) => {
@@ -8,7 +8,7 @@ export function map(data, fn) {
   return mappedData;
 }
 
-export function filter(data, fn) {
+function filter(data, fn) {
   const filteredData = [];
 
   data.forEach((el) => {
@@ -18,12 +18,18 @@ export function filter(data, fn) {
   return filteredData;
 }
 
-export function reduce(data, fn) {
+function reduce(data, fn) {
   let reducedData = 0;
 
   data.forEach((el) => {
-    reducedData = fn(reducedData, fn(el));
+    reducedData = fn(reducedData, el);
   });
 
   return reducedData;
 }
+
+module.exports = {
+  filter,
+  map,
+  reduce,
+};
