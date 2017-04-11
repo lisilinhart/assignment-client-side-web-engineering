@@ -86,7 +86,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: './node_modules/chessboardjs/www/img',
             src: '**/*',
-            dest: './dist/images'
+            dest: './dist/img'
           },
           // html
           {
