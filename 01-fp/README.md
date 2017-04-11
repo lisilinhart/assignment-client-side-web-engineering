@@ -1,13 +1,13 @@
-# 03-yield
+# 01-fp
 
 ## Setup
 
 ```bash
-npm install
+yarn
 ```
 
 ## Dev
 
 ```bash
-npm test
+yarn test
 ```
