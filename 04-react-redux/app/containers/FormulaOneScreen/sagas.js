@@ -8,7 +8,7 @@ import { selectConstructorsLength } from './selectors';
 
 export function* getDrivers(action) {
   const constructor = action.constructor;
-  const requestURL = `http://ergast.com/api/f1/constructors/${constructor}/drivers.json`;
+  const requestURL = `http://ergast.com/api/f1/constructors/${constructor}/drivers.json?limit=300`;
 
   try {
     const response = yield call(request, requestURL);
