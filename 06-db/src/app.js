@@ -1,7 +1,7 @@
 import Controller from './controller'
 import {$on} from './helpers'
 import Template from './template'
-import Store from './store'
+import Store from './store-pouchdb'
 import View from './view'
 
 const store = new Store('todos-vanilla-es6')
