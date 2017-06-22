@@ -1,0 +1,35 @@
+.jp-social {
+    margin-bottom: $global-margin;
+}
+
+.jp-social__item {
+    width: 40px;
+    height: 40px;
+    margin-left: $global-margin;
+    border-radius: 50%;
+
+    a, i {
+        height: inherit;
+        width: inherit;
+        color: #fefefe;
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.jp-social--github {
+    background: $black;
+    color: $white;
+}
+
+.jp-social--twitter {
+    background: #4099FF;
+    color: $white;
+}
+
+.jp-social--500px {
+    background: #02adea;
+    color: $white;
+}

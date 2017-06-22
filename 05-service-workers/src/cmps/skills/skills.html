@@ -1,0 +1,14 @@
+<div>
+    <div data-skills-filter data-ng-if="skillsCtrl.filterBar"></div>
+    <div class="jp-skills">
+        <div class="jp-skills__heading">
+            <span data-translate="SKILL_STATUS.FIRST"></span>
+            <span data-translate="SKILL_STATUS.SECOND"></span>
+            <span data-translate="SKILL_STATUS.THIRD"></span>
+            <span data-translate="SKILL_STATUS.FOURTH"></span>
+        </div>
+        <div class="jp-skills__line" data-ng-repeat="skill in skills | filter:skillsCtrl.filterSkills" style="background-color: {{ skill.color  }}; " data-jp-skill-percent="{{ skill.percent }}">
+            <div class="jp-skills__title" data-ng-bind="skill.skill"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+// ========
+// SETTINGS
+// ========
+@import 'settings/_foundation-flex';
+@import 'settings/_variables';
+
+
+// ==========
+// COMPONENTS
+// ==========
+@import 'components/menu';
+@import 'components/divide';
+@import 'components/logo';
+@import 'components/section';
+@import 'components/form';
+@import 'components/button';
+@import 'components/social';
+
+body, html {
+    min-width : 320px;
+}
+
+.jp-hidden {
+    display: none !important;
+}
+
+.jp-body {
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-start {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-start;
+}
+
+.flex-end {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.flex-horizontal-center {
+    justify-content: center;
+}
+
+.relative {
+    position: relative;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+// animate body
+.ui-main {
+    &.ng-enter {
+        opacity: 0;
+        transition: 1s;
+    }
+
+    &.ng-enter-active {
+        opacity: 1;
+    }
+}

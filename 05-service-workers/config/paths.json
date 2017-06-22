@@ -1,0 +1,210 @@
+{
+    "names": {
+        "src": "src",
+        "assets": "assets",
+        "dest": "dest",
+        "dev": "dev",
+        "cache": ".cache"
+    },
+    "paths": {
+        "base": ".",
+        "dev": {
+            "base": "<%= paths.base %>/<%= names.dev %>",
+            "folder": {
+                "assets": {
+                    "base": "<%=   paths.dev.base %>/<%= names.assets %>",
+                    "js": "<%=     paths.dev.folder.assets.base %>/js",
+                    "jss": "<%=    paths.dev.folder.assets.js %>/**",
+                    "css": "<%=    paths.dev.folder.assets.base %>/css",
+                    "csss": "<%=   paths.dev.folder.assets.css %>/**"
+                }
+            },
+            "files": {
+                "html": "<%= paths.dev.base %>/**/*.html",
+                "js": "<%= paths.dev.folder.assets.jss %>/*.js",
+                "css": "<%= paths.dev.folder.assets.csss %>/*.css"
+            }
+        },
+        "vendor": {
+            "base": "<%= paths.base %>/vendor",
+            "css": [
+                "<%= paths.vendor.base %>/**/*.css"
+            ],
+            "js": [
+                "<%= paths.vendor.base %>/**/*.js"
+            ],
+            "min": {
+                "js": "<%=  paths.vendor.base %>/**/*.min.js",
+                "css": "<%= paths.vendor.base %>/**/*.min.css"
+            }
+        },
+        "src": {
+            "base": "<%=  paths.base      %>/<%= names.src %>",
+            "tests": "<%= paths.src.base  %>/**/*.spec.js",
+            "copy": [
+                "<%= paths.src.base %>/**/*",
+                "<%= paths.src.base %>/**/.*",
+                "<%= paths.src.base %>/*.html",
+                "!<%= paths.src.base %>/**/*.js",
+                "!<%= paths.src.base %>/**/*.scss"
+            ],
+            "folder": {
+                "assets": {
+                    "base": "<%=  paths.src.base               %>/<%= names.assets %>",
+                    "js": "<%=    paths.src.folder.assets.base %>/js",
+                    "jss": "<%=   paths.src.folder.assets.js   %>/**",
+                    "scss": "<%=  paths.src.folder.assets.base %>/scss",
+                    "scsss": "<%= paths.src.folder.assets.scss %>/**",
+                    "css": "<%=   paths.src.folder.assets.base %>/css",
+                    "csss": "<%=  paths.src.folder.assets.css  %>/**"
+                },
+                "angular": {
+                    "base": "<%= paths.src.base %>"
+                }
+            },
+            "ignore": {
+                "modules": [
+                    "!<%= paths.src.base %>/**/node_modules/**/*.js",
+                    "!<%= paths.src.base %>/**/node_modules/**/*.css",
+                    "!<%= paths.src.base %>/**/node_modules/**/*.html"
+                ],
+                "tests": [
+                    "!<%= paths.src.tests %>"
+                ],
+                "browser_scss": "!<%= paths.src.folder.assets.scss %>/browser.*/**/*.scss",
+                "_js": [
+                    "!<%=   paths.src.base   %>/**/_*.js"
+                ],
+                "couldBeVendor": [
+                    "!<%= paths.src.base %>/**/*.min.js",
+                    "!<%= paths.src.base %>/**/*jquery*.js",
+                    "!<%= paths.src.base %>/**/*angular*.js",
+                    "!<%= paths.src.base %>/**/*ember*.js",
+                    "!<%= paths.src.base %>/**/*bootstrap*.js",
+                    "!<%= paths.src.base %>/**/*.min.css",
+                    "!<%= paths.src.base %>/**/*bootstrap*.css"
+                ],
+                "_scss": "!<%= paths.src.base %>/**/_*.scss",
+                "_css": "!<%=  paths.src.base %>/**/_*.css",
+                "_html": "!<%= paths.src.base %>/**/_*.html",
+                "html": "!<%=  paths.src.base %>/**/*.html",
+                "assets": [
+                    "!<%= paths.src.files.assets.js",
+                    "!<%= paths.src.files.assets.css",
+                    "!<%= paths.src.files.assets.scss"
+                ],
+                "min": [
+                    "!<%= paths.src.base %>/**/*.min.*"
+                ]
+            },
+            "allFiles": {
+                "js": "<%=   paths.src.base %>/**/*.js",
+                "scss": "<%= paths.src.base %>/**/*.scss",
+                "css": "<%=  paths.src.base %>/**/*.css",
+                "html": "<%= paths.src.base %>/**/*.html"
+            },
+            "files": {
+                "js": [
+                    "<%= paths.src.allFiles.js %>",
+                    "<%= paths.src.ignore._js %>",
+                    "<%= paths.src.ignore.tests %>"
+                ],
+                "scss": [
+                    "<%= paths.src.folder.scss %>/main.scss",
+                    "<%= paths.src.allFiles.scss %>",
+                    "<%= paths.src.ignore.browser_scss %>",
+                    "<%= paths.src.ignore._scss %>"
+                ],
+                "css": [
+                    "<%= paths.src.allFiles.css %>",
+                    "<%= paths.src.ignore._css %>"
+                ],
+                "html": [
+                    "<%= paths.src.allFiles.html %>",
+                    "<%= paths.src.ignore._scss %>"
+                ],
+                "assets": {
+                    "js": [
+                        "<%= paths.src.folder.assets.jss %>/*.class.js",
+                        "<%= paths.src.folder.assets.jss %>/*.js",
+                        "<%= paths.src.folder.assets.jss %>/*.init.js",
+                        "<%= paths.src.ignore._js %>",
+                        "<%= paths.src.ignore.tests %>"
+                    ],
+                    "scss": [
+                        "<%= paths.src.folder.assets.scss %>/*.scss",
+                        "<%= paths.src.ignore._scss %>",
+                        "<%= paths.src.folder.assets.css %>/*.css",
+                        "<%= paths.src.ignore._css %>"
+                    ]
+                },
+                "angular": {
+                    "modules": "<%= paths.src.folder.angular.base %>/**/*.module.js",
+                    "directives": [
+                        "<%= paths.src.folder.angular.base %>/**/*.directive.js",
+                        "<%= paths.src.folder.angular.base %>/**/*.dir.js"
+                    ],
+                    "services": [
+                        "<%= paths.src.folder.angular.base %>/**/*.factory.js",
+                        "<%= paths.src.folder.angular.base %>/**/*.provider.js",
+                        "<%= paths.src.folder.angular.base %>/**/*.service.js"
+                    ],
+                    "controller": [
+                        "<%= paths.src.folder.angular.base %>/**/*Ctrl.js",
+                        "<%= paths.src.folder.angular.base %>/**/*Controller.js",
+                        "<%= paths.src.folder.angular.base %>/**/*.ctrl.js",
+                        "<%= paths.src.folder.angular.base %>/**/*.controller.js"
+                    ],
+                    "all": [
+                        "<%= paths.src.files.angular.modules %>",
+                        "<%= paths.src.files.angular.directives %>",
+                        "<%= paths.src.files.angular.services %>",
+                        "<%= paths.src.files.angular.controller %>"
+                    ],
+                    "html": [
+                        "!<%= paths.src.base %>/index.html",
+                        "<%= paths.src.base %>/**/*.html"
+                    ]
+                },
+                "couldBeVendor": {
+                    "js": [
+                        "<%= paths.src.base %>/**/*.min.js",
+                        "<%= paths.src.base %>/**/*jquery*.js",
+                        "<%= paths.src.base %>/**/*angular*.js",
+                        "<%= paths.src.base %>/**/*ember*.js",
+                        "<%= paths.src.base %>/**/*bootstrap*.js"
+                    ],
+                    "css": [
+                        "<%= paths.src.base %>/**/*.min.css",
+                        "<%= paths.src.base %>/**/*bootstrap*.css"
+                    ]
+                }
+            }
+        },
+        "dest": {
+            "base": "<%=  paths.base %>/<%= names.dest %>",
+            "folder": {
+                "assets": {
+                    "base": "<%= paths.dest.base %>/<%= names.assets %>",
+                    "js": "<%=   paths.dest.folder.assets.base %>/js",
+                    "css": "<%=  paths.dest.folder.assets.base %>/css"
+                }
+            }
+        },
+        "coverage": {
+            "base": "<%= paths.base %>/coverage"
+        },
+        "reports": {
+            "base": "<%= paths.base %>/reports",
+            "scss": "<%= paths.reports.base %>/sasslint.xml",
+            "js": "<%= paths.reports.base %>/eslint.xml"
+        },
+        "config": {
+            "base": "<%= paths.base %>/config",
+            "scsslint": "<%= paths.config.base %>/scsslint.yml",
+            "htmllint": "<%= paths.config.base %>/.htmllintrc",
+            "eslint": "<%= paths.config.base %>/.eslintrc",
+            "karma": "<%= paths.config.base %>/karma.js"
+        }
+    }
+}

@@ -1,0 +1,173 @@
+// =================
+// SECTION COMPONENT
+// =================
+$section-bubble-height: 200px;
+
+.jp-section {
+    // background: $secondary-color;
+}
+
+.jp-section--white {
+    background: $white;
+}
+
+.jp-section--max-width {
+    max-width: 55rem;
+}
+
+.jp-section--bubble-down {
+    position: relative;
+    margin-bottom: ($section-bubble-height / 2) + 30px;
+
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: -25%;
+        bottom: (-$section-bubble-height / 2);
+        height: $section-bubble-height;
+        width: 150%;
+        border-radius: 50%;
+        background: inherit;
+        z-index: -1;
+    }
+}
+
+.jp-section--bubble-up {
+    position: relative;
+    margin-top: ($section-bubble-height / 2) + 30px;
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: -25%;
+        top: (-$section-bubble-height / 2);
+        height: $section-bubble-height;
+        width: 150%;
+        border-radius: 50%;
+        background: inherit;
+        z-index: -1;
+    }
+}
+
+.jp-section__inner {
+    // .row values
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.jp-section__inner--contact {
+    padding: ($global-padding * 4) 0 0;
+}
+
+.jp-section__image {
+    max-width: 50%;
+}
+
+.jp-section__padding {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.jp-section__background {
+    background-image: url('/assets/img/slider/hoverfly.jpg');
+    background-size: cover;
+    position: relative;
+    padding: $global-padding * 4 $global-padding * 10;
+}
+
+.jp-section__background--half {
+    &:before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $body-background;
+        z-index: 0;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba($primary-color-light, 0.5);
+        z-index: 0;
+    }
+
+    .jp-section__inner {
+        background: $body-background;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.jp-section--quote {
+    @extend .row;
+    width: 100%;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        width: 100%;
+        padding: $global-padding;
+        margin: 0;
+        text-align: center;
+        letter-spacing: 1px;
+        font-style: italic;
+        color: lighten($black, 20%);
+
+        &:before {
+            content: '"';
+            display: inline-block;
+        }
+
+        &:after {
+            content: '"';
+            display: inline-block;
+        }
+    }
+}
+
+@media #{$medium-only} {
+    .jp-section__background {
+        padding: $global-padding * 2 $global-padding * 5;
+    }
+}
+
+@media #{$small-only} {
+    $section-bubble-height: 70px;
+
+    .jp-section--bubble-down {
+        margin-bottom: ($section-bubble-height / 2) + 30px;
+
+        &:after {
+            bottom: (-$section-bubble-height / 2);
+            height: $section-bubble-height;
+        }
+    }
+
+    .jp-section--bubble-up {
+        margin-top: ($section-bubble-height / 2) + 30px;
+
+        &:before {
+            top: (-$section-bubble-height / 2);
+            height: $section-bubble-height;
+        }
+    }
+
+    .jp-section__background {
+        padding: $global-padding * 1 $global-padding * 1;
+    }
+}

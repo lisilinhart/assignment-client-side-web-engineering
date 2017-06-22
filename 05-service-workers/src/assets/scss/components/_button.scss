@@ -1,0 +1,23 @@
+// ================
+// BUTTON COMPONENT
+// ================
+
+.jp-button {
+    background-color: $primary-color;
+    color: $white;
+    padding: ($global-padding / 2) $global-padding;
+    margin: 0 0 ($global-margin / 2) ($global-margin / 2);
+    border-radius: 2px;
+}
+
+.jp-button--active {
+    background-color: lighten($primary-color, 55%);
+    color: $black;
+}
+
+@media #{$small-only} {
+    .jp-button {
+        width: 100%;
+        display: block;
+    }
+}

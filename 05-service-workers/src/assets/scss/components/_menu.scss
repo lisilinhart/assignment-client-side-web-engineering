@@ -1,0 +1,111 @@
+.jp-menu {
+	ul, ol {
+		list-style: none;
+	}
+}
+
+.jp-menu--dashed .jp-menu__list-item {
+	border-left: 1px solid $white;
+	padding: $global-padding / 10 $global-padding / 2;
+
+	&:first-child {
+		border: 0;
+	}
+}
+
+.jp-menu__main {
+    z-index: 10;
+    transition: background .3s, color .3s;
+}
+
+.jp-menu__list-item {
+	display: inline-block;
+    float: left;
+
+    a {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.jp-menu__hamburger {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+@media #{$medium-up} {
+    .jp-menu--brackets .jp-menu__list-item {
+        padding: 0 $global-padding;
+        position: relative;
+
+        &:before {
+            content: '{';
+            left: 10px;
+        }
+
+        &:after {
+            content: '}';
+            right: 10px;
+        }
+
+        &:before, &:after {
+            display: block;
+            position: absolute;
+            top: -1px;
+            opacity: 0;
+            transition: opacity 0.5s, right 0.5s, left 0.5s;
+        }
+
+        &:hover, &.jp-menu__list-item--active {
+            &:before {
+                left: 2px;
+                opacity: 1;
+            }
+
+            &:after {
+                right: 2px;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+@media #{$small-only} {
+    .jp-menu__main {
+        width: 100%;
+        position: absolute;
+        top: $header-height-small;
+        left: 0;
+        border-bottom: 5px solid $primary-color;
+        background: $primary-color;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s;
+
+        a, a:hover, a:last-child, a:first-child {
+            border-radius: 0;
+        }
+
+        > ul .jp-menu__list-item {
+            width: 100%;
+            display: block;
+            border: 0;
+            text-align: center;
+
+            a {
+                padding: 1.5em;
+            } 
+        }
+    }
+
+    .jp-menu__main--active {
+        max-height: 300px;
+    }
+
+    .jp-menu--brackets .jp-menu__list-item--active a {
+        color: $primary-color;
+        background: $white;
+    }
+}

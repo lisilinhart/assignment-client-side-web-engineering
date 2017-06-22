@@ -1,0 +1,29 @@
+// =============
+// HEADER MODULE
+// =============
+
+.jp-header {
+	background: $primary-color;
+	height: $header-height;
+	color: $white;
+
+	a {
+		color: $white;
+		float: left; // remove if it makes troubles
+	}
+
+	.jp-logo {
+		bottom: -($logo-width / 2);
+		left: $global-padding;
+	}
+}
+
+.jp-header__inner {
+    height: inherit;
+}
+
+@media #{$small-only} {
+	.jp-header {
+		height: $header-height-small;
+	}
+}

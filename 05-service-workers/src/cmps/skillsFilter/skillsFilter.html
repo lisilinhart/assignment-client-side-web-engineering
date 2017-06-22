@@ -1,0 +1,6 @@
+<div class="jp-skills-filter">
+    <button class="jp-button" data-ng-click="skillsFilterCtrl.setFilter(undefined)" data-ng-class="{ 'jp-button--active' : skillsFilterCtrl.filter === undefined }" data-translate="FILTER.ALL"></button>
+    <button class="jp-button" data-ng-click="skillsFilterCtrl.setFilter({type : 'programming'})" data-ng-class="{ 'jp-button--active' : skillsFilterCtrl.filter.type === 'programming' }" data-translate="FILTER.PROGRAMMING"></button>
+    <button class="jp-button" data-ng-click="skillsFilterCtrl.setFilter({framework : true})" data-ng-class="{ 'jp-button--active' : skillsFilterCtrl.filter.framework === true }" data-translate="FILTER.FRAMEWORK"></button>
+    <button class="jp-button" data-ng-click="skillsFilterCtrl.setFilter({type : 'design'})" data-ng-class="{ 'jp-button--active' : skillsFilterCtrl.filter.type === 'design' }" data-translate="FILTER.DESIGN"></button>
+</div>

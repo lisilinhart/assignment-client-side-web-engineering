@@ -1,0 +1,27 @@
+{
+  "name": "angularlogin",
+  "version": "1.0.0-alpha",
+  "authors": [
+    "Jan Peer Stöcklmair"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-cookies": "1.5.8",
+    "angular-local-storage": "0.2.7",
+    "angular-translate": "2.13.0",
+    "angular-translate-loader-static-files": "2.13.0",
+    "angular-ui-router": "0.2.18",
+    "jquery": "2.2.4",
+    "foundation-sites": "6.2.4",
+    "angular-i18n": "1.5.8",
+    "angular-animate": "1.5.8"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,24 @@
+// ================
+// DIVIDE COMPONENT
+// ================
+
+.jp-divide {
+    @extend .row;
+    height: 1px;
+    border-bottom: $medium-gray solid 1px;
+    margin-top: $global-margin * 2;
+    margin-bottom: $global-margin * 2;
+    position: relative;
+}
+
+.jp-divide__title {
+    background: $body-background;
+    position: absolute;
+    top: -10px;
+    left: 20%;
+    margin-left: -150px;
+    width: 300px;
+    text-align: center;
+    color: $dark-gray;
+    letter-spacing: 2px;
+}

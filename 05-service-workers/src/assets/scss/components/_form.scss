@@ -1,0 +1,52 @@
+// ==============
+// FORM COMPONENT
+// ==============
+
+.jp-form {
+    // background: $white;
+    max-width: 500px;
+    // border-radius: 2px;
+    // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.jp-form__input, .jp-form__textarea {
+    width: 100%;
+    outline: none;
+    display: block;
+    background: $white;
+    border: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    padding: ($global-padding / 2) $global-padding;
+    color: $primary-color;
+    font-family: inherit;
+    font-size: inherit;
+    // font-weight: $semibold;
+    line-height: inherit;
+    transition: 0.3s ease;
+}
+
+.jp-form__textarea {
+    min-height: 200px;
+}
+
+.jp-form__label {
+    display: block;
+    margin: $global-margin 0 ($global-margin / 2);
+    color: $primary-color;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    // font-weight: $semibold;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.jp-form__success {
+    padding: 0.5em;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: $box-shadow;
+    background: $success-color;
+    color: white;
+}

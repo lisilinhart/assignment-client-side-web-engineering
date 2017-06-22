@@ -1,0 +1,33 @@
+.jp-about {
+}
+
+.jp-about__picture {
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 200%;
+        background: black;
+        position: absolute;
+        left: -200%;
+    }
+}
+
+@media #{$small-only} {
+    .jp-about__picture {
+        border-radius: 50%;
+        overflow: hidden;
+        background: black;
+        width: 50%;
+        height: 0;
+        padding-bottom: 50%;
+        position: relative;
+        margin: $global-margin auto;
+    }
+
+    .jp-about__text {
+        text-align: center;
+    }
+}

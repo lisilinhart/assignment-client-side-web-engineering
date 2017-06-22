@@ -1,0 +1,55 @@
+<div class="jp-contact-page">
+    <section class="jp-section jp-section--white jp-section--bubble-down">
+        <div class="jp-section__inner jp-section__inner--contact">
+            <div data-my-services></div>
+        </div>
+    </section>
+    <div class="row jp-social flex flex-horizontal-center">
+        <div class="jp-social__item jp-social--github">
+            <a href="https://www.github.com/JPeer264" target="_blank">
+                <i class="flex flex-center flex-horizontal-center fa fa-github-alt" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="jp-social__item jp-social--twitter">
+            <a href="https://www.twitter.com/JPeer264" target="_blank">
+                <i class="flex flex-center flex-horizontal-center fa fa-twitter" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="jp-social__item jp-social--500px">
+            <a href="https://500px.com/JPeer" target="_blank">
+                <i class="flex flex-center flex-horizontal-center fa fa-500px" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <div class="row jp-form" data-ng-if="isSent">
+        <div class="column">
+            <div class="jp-form__success">
+                <span data-translate="THANK_YOU"></span>
+            </div>
+        </div>
+    </div>
+    <form name="contact-form" data-ng-submit="send()">
+        <div class="column">
+            <div class="row jp-form">
+                <div class="columns small-12 medium-6">
+                    <label for="name" class="jp-form__label" data-translate="YOUR_NAME"></label>
+                    <input type="text" id="name" class="jp-form__input" data-ng-model="contact.name" data-ng-disabled="isSent" required>
+                </div>
+                <div class="columns small-12 medium-6">
+                    <label for="email" class="jp-form__label" data-translate="YOUR_EMAIL"></label>
+                    <input type="email" id="email" class="jp-form__input" data-ng-model="contact.email" data-ng-disabled="isSent" required>
+                </div>
+                <div class="columns small-12">
+                    <label for="message" class="jp-form__label" data-translate="YOUR_MESSAGE"></label>
+                    <textarea id="message" class="jp-form__textarea" data-ng-model="contact.message" data-ng-disabled="isSent" required></textarea>
+                </div>
+                <div class="columns small-12">
+                    <button class="jp-button" type="submit" data-ng-disabled="isSent" data-translate="SEND"></button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div data-mountains></div>
+</div>

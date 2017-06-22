@@ -1,0 +1,78 @@
+// =============
+// SLIDER MODULE
+// =============
+
+$ratio: 6/20;
+
+.jp-slider {
+    background: $primary-color;
+    position: relative;
+}
+
+.jp-slider__inner {
+    // @extend .row;
+    position: relative;
+    overflow: hidden;
+    padding-top: percentage($ratio);
+
+    &:after {
+        content: '';
+        height: 20%;
+        width: 150%;
+        position: absolute;
+        bottom: -10%;
+        left: -10%;
+        transform: rotate(-2deg);
+        display: block;
+        
+        background: $body-background;
+        z-index: 3;
+    }
+}
+
+.jp-slider__items {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    .no-js & {
+        overflow: auto;
+    }
+
+    .no-csstransforms & {
+        left: 0;
+    }
+}
+
+.jp-slider__item {
+    padding-top: percentage($ratio);
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    max-height: 400px;
+    white-space: normal;
+    
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1500ms linear;
+
+    img {
+        max-width: initial;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.jp-slider__item--active {
+    opacity: 1;
+    z-index: 2;
+}

@@ -1,0 +1,20 @@
+<div class="jp-project">
+    <div class="jp-project__image">
+        <a data-ng-href="{{ href }}" target="_blank">
+            <div class="jp-project__background-image" data-back-img="{{ img }}" data-cover="{{ cover }}"></div>
+        </a>
+    </div>
+    <div class="jp-project__content">
+        <a data-ng-href="{{ href }}" target="_blank">
+            <div class="jp-project__title" data-ng-bind="title"></div>
+        </a>
+        <div class="jp-project__tags hide-for-small-only">
+            <div class="jp-project__tag" data-ng-repeat="tag in tags" data-ng-bind="tag"></div>
+            <div class="jp-project__tag jp-project__tag--overflow jp-hidden">
+                <span>+</span>
+                <div class="jp-project__overflow-text"></div>
+            </div>
+        </div>
+        <p>
+    </div>
+</div>

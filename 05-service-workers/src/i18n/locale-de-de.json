@@ -1,0 +1,66 @@
+{
+    "PAGES": {
+        "CONTACT": "Kontakt",
+        "ABOUT": "Über mich",
+        "PROJECTS": "Projekte"
+    },
+
+    "ABOUT": {
+        "ME": "über mich",
+        "ME_TEXT": "Ich bin ein Front- und Backend Entwickler aus Graz, Österreich. Derzeit studiere ich an der <a href=\"https://www.fh-salzburg.ac.at\" target=\"_blank\">FH Salzburg</a> mit der Vertiefung MultiMediaTechnology (Master).</p><p>Nach einigen Codingsessions liebe ich es mit meinem Motorrad Ausfahrten zu machen und schieße gerne Makro und Landschaftsfotos von der Natur. Meine aktuellsten Fotos publiziere ich gerne auf meinem Profil auf <a href=\"https://www.500px.com/JPeer\" target=\"_blank\">500px</a>.",
+        "QUOTE": "Man lernt am meisten durch das Reisen"
+    },
+
+    "MENU": "MENÜ",
+
+    "SKILL_STATUS": {
+        "FIRST": "Beginner",
+        "SECOND": "Nicht schlecht",
+        "THIRD": "Ehm, wow",
+        "FOURTH": "Status: VERRÜCKT"
+    },
+
+    "QUOTE": {
+        "SECTION": "Nur der Moment zählt"
+    },
+
+    "CONTACT_ME": "Kontaktiere mich!",
+    "RECENT_WORK": "Letzte Arbeiten",
+    "BEST_SKILLS": "Beste Skills",
+    "SKILLS": "Skills",
+    "CODE": "Code",
+    "CODE_TEXT": "Ich liebe sauberen und wiederverwendbaren Code, aber das klappt natürlich nur mit ausreichend Pizza! Um Fehler zu vermeiden verwende ich Buildtools um die Qualität des Codes zu überprüfen. Continuous Integration spielt einen großen Part in allen meinen Projekten.",
+    "AUTOMATISATION": "Automatisierung",
+    "AUTOMATISATION_TEXT": "Mit Jenkins verbessere ich den Workflow des Deployments und Testens. Er macht das, was für mich zu lange dauern würde, wenn ich das jedes Mal machen müsste. Continuous Integration sollte ein Teil einer jeden Person sein.",
+    "INTEREST": "Interesse",
+    "INTEREST_TEXT": "Für mich gibt es nichts Interessanteres als Neues zu lernen, ganz egal ob neue Technologien, Kochmethoden, Leute oder Orte. Alles hat etwas Besonderes an sich, wovon ich lernen kann.",
+
+    "TIMELINE": {
+        "NAME": "Timeline",
+        "ST_POELTEN": "Ich studierte Medientechnik an der <a href=\"{{ href }}\" target=\"_blank\">Fachhochschule St. Pölten</a>.",
+        "BERLIN": "Bei <a href=\"{{ href }}\" target=\"_blank\">{{ text }}</a> machte ich ein Praktikum für 6 Monate.",
+        "BARCELONA": "Mit einem internationalen Team erstellten wir ein Forum, namens Elephorum, für das <a href=\"{{ href }}\" target=\"_blank\">{{ text }}</a>.",
+        "GRAZ": "Ich machte ein Praktikum in meiner Heimatstadt bei <a href=\"{{ href }}\" target=\"_blank\">{{ text }}</a>",
+        "SALZBURG": "Derzeit studiere ich an der <a href=\"https://www.fh-salzburg.ac.at\" target=\"_blank\">FH Salzburg</a> mit der Vertiefung MultiMediaTechnology (Master). Web ♥"
+    },
+
+    "FILTER": {
+        "ALL": "Alle",
+        "PROGRAMMING": "Programmieren",
+        "FRAMEWORK": "Framework",
+        "DESIGN": "Design"
+    },
+
+    "YOUR_NAME": "Dein Name",
+    "YOUR_EMAIL": "Deine Email",
+    "YOUR_MESSAGE": "Deine Nachricht",
+    "SEND": "Senden",
+    "THANK_YOU": "Dankeschön, ich melde mich so bald wie möglich!",
+
+    "SERVICES": {
+        "CONCEPT": "Hilfe bei der Konzeption",
+        "DESIGN": "Grafische Umsetzung von individuellen Logos und Webseiten",
+        "CODE": "Schreiben von effizientem und wiederverwendbarem Code",
+        "EXIST": "Überarbeitung von existierenden Seiten"
+    }
+}

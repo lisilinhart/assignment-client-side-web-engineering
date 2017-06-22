@@ -1,0 +1,26 @@
+.jp-languagechooser {
+}
+
+.jp-languagechooser--active li {
+    border-bottom: 1px solid $white !important;
+
+}
+
+.jp-languagechooser__list-item {
+    @extend .jp-menu__list-item;
+
+    &:hover li {
+       border-bottom: 1px solid $white !important;
+    }
+}
+
+@media #{$small-only} {
+    .jp-languagechooser {
+        padding: ($global-padding / 2);
+        border-top: 1px dashed $white;
+
+        ul {
+            margin: 0 auto;
+        }
+    }
+}

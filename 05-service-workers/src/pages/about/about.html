@@ -1,0 +1,81 @@
+<div>
+    <section class="jp-about">
+        <div class="row">
+            <div class="columns small-12 medium-6">
+                <div class="jp-about__picture">
+                    <img src="assets/img/me_bw.png"/>
+                </div>
+            </div>
+            <div class="columns small-12 medium-6 flex flex-center">
+                <div class="jp-about__text">
+                    <h1 data-translate="ABOUT.ME"></h1>
+                    <p data-translate="ABOUT.ME_TEXT" data-translate-value-text="EN GARDE" data-translate-value-href="https://www.engarde.net"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div>
+        <div class="jp-divide">
+            <div class="jp-divide__title">
+                <span data-translate="SKILLS"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div data-skills="skills" data-filter-bar="true"></div>
+            </div>
+        </div>
+        <section class="jp-section">
+            <div class="jp-section__inner jp-section--max-width row">
+                <div class="column small-12 medium-6 jp-section__padding">
+                    <h4 data-translate="CODE"></h4>
+                    <p data-translate="CODE_TEXT"></p>
+                </div>
+                <div class="column small-12 medium-6 flex flex-horizontal-center flex-center">
+                    <img class="jp-section__image" src="assets/img/code.svg">
+                </div>
+                <div class="column small-12 medium-6 flex flex-horizontal-center flex-center">
+                    <img class="jp-section__image" src="assets/img/ci.png">
+                </div>
+                <div class="column small-12 medium-6 jp-section__padding">
+                    <h4 data-translate="AUTOMATISATION"></h4>
+                    <p data-translate="AUTOMATISATION_TEXT"></p>
+                </div>
+                <div class="column small-12 medium-6 jp-section__padding">
+                    <h4 data-translate="INTEREST"></h4>
+                    <p data-translate="INTEREST_TEXT"></p>
+                </div>
+                <div class="column small-12 medium-6 flex flex-horizontal-center flex-center">
+                    <img class="jp-section__image" src="assets/img/balloons.svg">
+                </div>
+            </div>
+        <div data-picture-quote></div>
+        <div class="jp-divide">
+            <div class="jp-divide__title">
+                <span data-translate="TIMELINE.NAME"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div data-timeline></div>
+            </div>
+        </div>
+        <div class="jp-section">
+            <div class="jp-section--quote">
+                <h4 data-translate="ABOUT.QUOTE"></h4>
+            </div>
+        </div>
+
+        <div class="jp-divide">
+            <div class="jp-divide__title">
+                <span data-translate="RECENT_WORK"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="columns small-12 medium-6 large-4" data-ng-repeat="project in projects">
+                <div data-project data-title="project.title" data-tags="project.tags" data-img="project.img" data-href="project.href" data-cover="project.cover"></div>
+            </div>
+        </div>
+    </div>
+</div>

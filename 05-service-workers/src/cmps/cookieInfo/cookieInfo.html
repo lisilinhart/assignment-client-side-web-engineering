@@ -1,0 +1,10 @@
+<div id="cookie-info" data-ng-if="checkCookieAccepted() && isLoggedIn()">
+    <div class="row flex-center">
+        <div class="column">
+            {{ "COOKIE_POLICY" | translate }}
+        </div>
+        <div class="column flex-end">
+            <button data-ng-click="acceptCookies()">{{ "WORD_OK" | translate }}</button>
+        </div>
+    </div>
+</div>

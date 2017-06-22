@@ -1,0 +1,32 @@
+// =================
+// MYSERVICES MODULE
+// =================
+
+.jp-my-services {
+
+}
+
+.jp-my-service {
+    margin-bottom: $global-margin;
+}
+
+.jp-my-service__image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: $primary-color;
+    border-radius: 50%;
+    margin-bottom: $global-margin;
+
+    i {
+        height: inherit;
+        width: inherit;
+        color: $white;
+    }
+}
+
+.jp-my-service__text {
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}

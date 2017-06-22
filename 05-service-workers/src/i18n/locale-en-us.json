@@ -1,0 +1,64 @@
+{
+    "PAGES": {
+        "CONTACT": "Contact",
+        "ABOUT": "About",
+        "PROJECTS": "Projects"
+    },
+
+    "ABOUT": {
+        "ME": "about me",
+        "ME_TEXT": "I'm a frontend and backend Developer from Graz, Austria. Currently I study MultiMediaTechnology (Master) at <a href=\"https://www.fh-salzburg.ac.at\" target=\"_blank\">FH Salzburg</a>.</p><p>After some coding sessions I love to drive with my motorbike and take some macro or landscape pictures of the nature. I publish my newest pictures on <a href=\"https://www.500px.com/JPeer\" target=\"_blank\">500px</a>.",
+        "QUOTE": "Traveling is the way you learn the most"
+    },
+
+    "SKILL_STATUS": {
+        "FIRST": "Beginner",
+        "SECOND": "Not bad",
+        "THIRD": "Ehm, wow",
+        "FOURTH": "Status: INSANE"
+    },
+
+    "QUOTE": {
+        "SECTION": "Only the moment counts"
+    },
+
+    "CONTACT_ME": "Contact me!",
+    "RECENT_WORK": "Recent work",
+    "BEST_SKILLS": "Best skills",
+    "SKILLS": "Skills",
+    "CODE": "Code",
+    "CODE_TEXT": "I love well structured and reusable code, but that just work with a lot of pizza! Human make mistakes therefore I use buildtools to check the quality of the code. Continuous Integration and testing are a big part of my projects.",
+    "AUTOMATISATION": "Automatisation",
+    "AUTOMATISATION_TEXT": "With Jenkins I enhance my deployment and testing. He does what takes too long if I have to do that everytime. Continuous Integration should be a part of every single person.",
+    "INTEREST": "Interest",
+    "INTEREST_TEXT": "Learning new stuff is one of the most interesting things for me. New technologies, cooking methods, people or places. Everything has something special where I can learn something new. Personally I like teaching and helping other people - it just makes me everytime happy.",
+
+    "TIMELINE": {
+        "NAME": "Timeline",
+        "ST_POELTEN": "I studied Mediatechnologies at the <a href=\"{{ href }}\" target=\"_blank\">university of applied sciences St.Pölten</a>.",
+        "BERLIN": "I made an internship at <a href=\"{{ href }}\" target=\"_blank\">{{ text }}</a> for 6 months.",
+        "BARCELONA": "With a team from across the world we developed a forum for the <a href=\"{{ href }}\" target=\"_blank\">{{ text }}</a> called Elephorum.",
+        "GRAZ": "Summer 2016 I did my internship in Graz at <a href=\"{{ href }}\" target=\"_blank\">{{ text }}</a>",
+        "SALZBURG": "Currently I study MultiMediaTechnology (Master) at <a href=\"https://www.fh-salzburg.ac.at\" target=\"_blank\">FH Salzburg</a>. Web ♥"
+    },
+
+    "FILTER": {
+        "ALL": "All",
+        "PROGRAMMING": "Programming",
+        "FRAMEWORK": "Framework",
+        "DESIGN": "Design"
+    },
+
+    "YOUR_NAME": "Your name",
+    "YOUR_EMAIL": "Your email",
+    "YOUR_MESSAGE": "Your message",
+    "SEND": "Send",
+    "THANK_YOU": "Thank you, I will contact you as soon as possible!",
+
+    "SERVICES": {
+        "CONCEPT": "Help with the concept",
+        "DESIGN": "Designing individual logos or webpages",
+        "CODE": "Writing efficient and reusable code",
+        "EXIST": "Upgrade an existing page"
+    }
+}

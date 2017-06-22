@@ -1,0 +1,89 @@
+// ====0========
+// SKILLS MODULE
+// =============
+
+$skill-padding-right: 5%;
+$skill-amount-text: 4;
+$skill-margin: (100% - ($skill-padding-right)) / ($skill-amount-text - 1);
+
+.jp-skills {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: $global-margin;
+}
+
+.jp-skills__heading {
+    display: none;
+}
+
+
+.jp-skills__title {
+    margin-top: $global-margin;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    top: - ($global-margin * 2);
+    background: $body-background;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.jp-skills__line {
+    width: 0;
+    height: 1.5rem;
+    margin-top: $global-margin * 2;
+    position: relative;
+    border-radius: 3px;
+    background: black;
+    transition: width 1s;
+
+    // @for $i from 1 through 10 {
+    //     &:nth-of-type(#{$i}) {
+    //         transition-delay: #{$i / 5}s;
+    //     }
+    // }
+}
+
+@media #{$medium-up} {
+    .jp-skills {
+        padding-right: $skill-padding-right;
+        padding-bottom: $global-padding;
+        position: relative;
+        background-image:
+            linear-gradient(to right, $primary-color 0%, $primary-color 100%),
+            linear-gradient(to right, $primary-color 0%, $primary-color 100%),
+            linear-gradient(to right, $primary-color 0%, $primary-color 100%),
+            linear-gradient(to right, $primary-color 0%, $primary-color 100%);
+        background-size: 1px 100%;
+        background-repeat: no-repeat;
+        background-position: ($skill-margin * 0) 50%, ($skill-margin * 1) 50%, ($skill-margin * 2) 50%, ($skill-margin * 3) 50%;
+    }
+
+    .jp-skills__heading {
+        display: block;
+        margin-bottom: $global-margin * 3;
+
+        span {
+            white-space: nowrap;
+        }
+
+        @for $i from 0 to 4 {
+            span:nth-of-type(#{$i + 1}) {
+                position: absolute;
+                left: ($skill-margin * $i) + 0.5; // plus 0.5 that the text is not directly on the background gradient
+            }
+        }
+
+        span:last-child {
+            top: 50%;
+            left: (($skill-margin * ($skill-amount-text - 1)) + 0.5) - 4.5;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+@media #{$small-only} {
+    .jp-skills__title {
+        left: $global-margin;
+    }
+} 
